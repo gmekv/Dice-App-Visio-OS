@@ -10,9 +10,13 @@ import SwiftUI
 @Observable
 
 class DiceData {
-    var rolledNumber = 0
-}
+    var firstDiceNumber = 0
+    var secondDiceNumber = 0
 
+    var total: Int {
+        return firstDiceNumber + secondDiceNumber
+    }
+}
 @main
 struct DiceVisionOSApp: App {
     @State var diceData = DiceData()
